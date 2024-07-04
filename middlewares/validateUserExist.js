@@ -1,7 +1,7 @@
 const { userData } = require("../helpers/registerUser");
 
 const validateUserExist = (req, res, next) => {
-  const { username, email } = req.body;
+  const { username } = req.body;
   const isUser = userData.find((user) => user.username === username);
 
   if (isUser) {
